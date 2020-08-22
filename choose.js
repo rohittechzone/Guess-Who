@@ -25,7 +25,7 @@ class Choose{
     }
     picChoose(){
       this.title.html("Choose Your Character");
-      this.title.position(displayWidth/5, displayHeight/2 -400);
+      this.title.position(displayWidth/5, displayHeight/8);
       this.dani.position(displayWidth/6,displayHeight/2 - 300);
       this.dani.size(125.6,183.3);
       this.david.position(displayWidth/6 + 180,displayHeight/2 - 300);
