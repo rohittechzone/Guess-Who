@@ -38,7 +38,11 @@ function draw(){
    //console.log(frameCount);
    
    if(click1 === 1){
+      fill("yellow");
       rect(displayWidth - 280,0,280,displayHeight);
+      fill("Black");
+      textSize(18);
+      text("(Quick reply)",displayWidth - 160 , displayHeight/2 - 35);
    }
    if(gameVar === 1){
       game.game();

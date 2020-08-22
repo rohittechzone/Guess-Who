@@ -14,6 +14,10 @@ class Chat {
       this.name.hide();
       this.button = createButton('Send');
       this.button.hide();
+      this.yes = createButton('yes');
+      this.yes.hide();
+      this.no = createButton('no');
+      this.no.hide();
       //this.button.size(100,200);
       this.submit = createButton('');
       this.submit.style('background', "url(https://lh3.googleusercontent.com/sO7imKpVYjVXFVTnl8DJ0ZCEETD4QwMAKxVx9YKQocgbambU-FACwHK_TWbChhHKynUB7SwRApCulQA0ik77z9zz8CO81pCvSMOXvqk9vGhHWkk9_-xsQHCJxyrIfzDyoTwmVra-kLNyibK3gcmrLb_WwEeQR_w3ZUgE20dxWYUIphhTcQwm74EWAjFIqUu6vzEQbRnW9grOSfsDTmWAwMAdOv9v8izIBN2N0rTSVj89-qhWhdzhSih-38cBqrWlsAEa4QEgLBGoOwqp6ZMdo5FwlJaCpw51L0Kt2g9fq4pkhtEvVLiESlxy-JiYpP3ELP9zGzhjHA5BFtVzasubtoXf9NLmkS-5iwhXkdilDMSnvs1V2yktX7lBBcTu266CFKX4GPBj0tyunBHC6ncs9I-ialCQxHb77IFcf9D3I360xX21_r4UkAPn9uk0SBlRdfYEFeIf_e1VTpTXvRALUH60v4Cz1FeAydO_U03VhPyD5l4QHE-6C-7j43MJnSY6LrOCMmYUMO4R8jyl8UKlFKVX9DapzNx04cdkTV1uUWXFm7d6vH3LZ9OECGIQzFh3_lXBSQFN-5ECHrwQ9XPPoS0AWDZJr_GjjOPZdQ34ufS06pSsSlJ3fhCGnaUIepzRfOINkvdOp5eni_nctw3raVxVOm_OxyzrCNe3bVUjJgQPHESGZJZZoo9RjSaQfA=w250-h75-no?authuser=0)");
@@ -35,6 +39,8 @@ class Chat {
       this.name.position(displayWidth/2-125, displayHeight/2 - 80);
       this.name.size(240,20);
       this.button.position(displayWidth - 260, displayHeight/2);
+      this.yes.position(displayWidth - 260 , displayHeight/2 - 50);
+      this.no.position(displayWidth - 200 , displayHeight/2 - 50);
       this.submit.position(displayWidth/2-125, displayHeight/2);
       this.submit.size(250,75);
       this.player1.position(displayWidth/2-125, displayHeight/2-150);
@@ -69,6 +75,8 @@ class Chat {
         //send = 1;
         this.input.show();
         this.button.show();
+        this.yes.show();
+        this.no.show();
         this.you.show();
         this.opponent.show();
         click1 = 1;
