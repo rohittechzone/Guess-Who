@@ -11,6 +11,8 @@ var char;
 var img;
 var dani,david,jim,laria,sherman;
 var game;
+var textMove = 0;
+var startVar = 0;
 
 function preload(){
    dani_img = loadImage('char/Dani.png');
@@ -32,11 +34,16 @@ function setup(){
 }
 function draw(){
    background(0, 128, 128);
+   //console.log(frameCount);
+   
    if(click1 === 1){
       rect(displayWidth - 280,0,280,displayHeight);
    }
    if(gameVar === 1){
       game.display();
+   }
+   if(startVar === 1){
+      game.start();
    }
    chat.display();
    //image(dani_img, displayWidth - 1150, displayHeight/2 - 300, 125.6, 183.3);

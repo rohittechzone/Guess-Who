@@ -25,7 +25,7 @@ class Choose{
     }
     picChoose(){
       this.title.html("Choose Your Character");
-      this.title.position(displayWidth/5, displayHeight/8);
+      this.title.position(displayWidth/5, displayHeight/2-400);
       this.dani.position(displayWidth/6,displayHeight/2 - 300);
       this.dani.size(125.6,183.3);
       this.david.position(displayWidth/6 + 180,displayHeight/2 - 300);
@@ -54,7 +54,8 @@ class Choose{
        this.laria.hide();
        this.sherman.hide();
        this.title.hide();
-       gameVar = 1;
+       startVar = 1;
+       //gameVar = 1;
        click = 0;
        });
 
@@ -66,7 +67,8 @@ class Choose{
        this.laria.hide();
        this.sherman.hide();
        this.title.hide();
-       gameVar = 1;
+       startVar = 1;
+       //gameVar = 1;
        click = 0;
        });
 
@@ -78,7 +80,8 @@ class Choose{
        this.laria.hide();
        this.sherman.hide();
        this.title.hide();
-       gameVar = 1;
+       startVar = 1;
+       //gameVar = 1;
        click = 0;
        });
 
@@ -90,7 +93,8 @@ class Choose{
        this.laria.hide();
        this.sherman.hide();
        this.title.hide();
-       gameVar = 1;
+       startVar = 1;
+       //gameVar = 1;
        click = 0;
        });
        
@@ -102,7 +106,8 @@ class Choose{
        this.laria.hide();
        this.sherman.hide();
        this.title.hide();
-       gameVar = 1;
+       //gameVar = 1;
+       startVar = 1;
        click = 0;
        });
 

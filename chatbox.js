@@ -58,6 +58,7 @@ class Chat {
         this.submit.show();
         this.player1.hide();
         this.player2.hide();
+        chatbox.clear("");
       });
       
       
