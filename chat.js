@@ -32,12 +32,12 @@ class Chatbox {
 
     getMessage(){
         
-        this.message1.position(displayWidth/2 + 80, displayHeight/2 - 200);
-        this.message.position(displayWidth/2 + 80, displayHeight/2 - 170);
+        this.message1.position(displayWidth - 160, displayHeight/2 - 200);
+        this.message.position(displayWidth - 160, displayHeight/2 - 150);
         if(click === 1){
            this.message.show();
            this.message1.show();
-           click = 0;
+           //click = 0;
         }
         if(plrnum === 1){
         var Message = database.ref('plr2message/plr2message');
@@ -67,9 +67,15 @@ class Chatbox {
         var plrvalue = "plr";
         database.ref(plrvalue).set({
           plrval: plrval,
+          //dani = 1
+          //david = 2
+          //jim = 3
+          //laria = 4
+          //sherman = 5
         });
         
      }
+
      clear(clear){
       var message = "plr2message";
       database.ref(message).set({
@@ -80,5 +86,19 @@ class Chatbox {
         plr1message: clear,
       });
      }
+     updateName(name){
+      
+      if(plrnum === 1){
+      var player1name = "player1name";
+      database.ref(player1name).set({
+        player1name: name,
+      });
+     }
+     if(plrnum === 2){
+      var player2name = "player2name";
+      database.ref(player2name).set({
+        player2name: name,
+      });
+     }
   }
-  
+}
