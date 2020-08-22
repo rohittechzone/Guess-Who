@@ -119,13 +119,17 @@ class Chatbox {
       if(plrnum === 1){
       var choice = database.ref('player2/player2');
         choice.on("value",(data)=>{
-         // if(send === 1){
-          opponentChoice = data.val();// = data.val();
+          opponentChoice = data.val();
           console.log(opponentChoice);
-          //}
-          //else if(send === 0){
-         // this.message1.html(data.val());
-         // }
+          
+        })
+    }
+    if(plrnum === 2){
+      var choice = database.ref('player1/player1');
+        choice.on("value",(data)=>{
+          opponentChoice = data.val();
+          console.log(opponentChoice);
+       
         })
     }
 

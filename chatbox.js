@@ -129,7 +129,75 @@ class Chat {
         
       });
   
-      
+        this.dani.mousePressed(()=>{
+          if(opponentChoice === 1){
+            this.dani.hide();
+            this.david.hide();
+            this.jim.hide();
+            this.laria.hide();
+            this.sherman.hide();
+          }
+          else{
+            image(wrong_img, displayWidth/2 - 149.3, displayHeight/2 - 170.5,298.6,341.3);
+          }
+
+        });
+ 
+        this.david.mousePressed(()=>{
+          if(opponentChoice === 2){
+            this.dani.hide();
+            this.david.hide();
+            this.jim.hide();
+            this.laria.hide();
+            this.sherman.hide();
+          }
+          else{
+            
+          }
+
+        });
+ 
+        this.jim.mousePressed(()=>{
+          if(opponentChoice === 3){
+            this.dani.hide();
+            this.david.hide();
+            this.jim.hide();
+            this.laria.hide();
+            this.sherman.hide();
+          }
+          else{
+            
+          }
+
+        });
+ 
+        this.laria.mousePressed(()=>{
+          if(opponentChoice === 4){
+            this.dani.hide();
+            this.david.hide();
+            this.jim.hide();
+            this.laria.hide();
+            this.sherman.hide();
+          }
+          else{
+            
+          }
+
+        });
+        
+        this.sherman.mousePressed(()=>{
+          if(opponentChoice === 5){
+            this.dani.hide();
+            this.david.hide();
+            this.jim.hide();
+            this.laria.hide();
+            this.sherman.hide();
+          }
+          else{
+            
+          }
+
+        });
   
     }
   }

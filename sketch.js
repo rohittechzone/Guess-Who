@@ -15,14 +15,16 @@ var textMove = 0;
 var startVar = 0;
 var playernum = 0;
 var opponentChoice = 0;
-var zero = 0;
+
 function preload(){
    dani_img = loadImage('char/Dani.png');
    david_img = loadImage("char/David.png");
    jim_img = loadImage("char/jim.png");
    laria_img = loadImage("char/Laria.png");
    sherman_img = loadImage("char/Sherman.png");
+   wrong_img = loadImage("char/wrong.png");
 }
+
 function setup(){
    background(0, 128, 128);
    //image(dani_img, 0, 0);
