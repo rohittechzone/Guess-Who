@@ -115,4 +115,19 @@ class Chatbox {
       });
      }
   }
+    getChoice(){
+      if(plrnum === 1){
+      var choice = database.ref('player2/player2');
+        choice.on("value",(data)=>{
+         // if(send === 1){
+          opponentChoice = data.val();// = data.val();
+          console.log(opponentChoice);
+          //}
+          //else if(send === 0){
+         // this.message1.html(data.val());
+         // }
+        })
+    }
+
+  }
 }

@@ -14,7 +14,8 @@ var game;
 var textMove = 0;
 var startVar = 0;
 var playernum = 0;
-
+var opponentChoice = 0;
+var zero = 0;
 function preload(){
    dani_img = loadImage('char/Dani.png');
    david_img = loadImage("char/David.png");
@@ -43,6 +44,7 @@ function draw(){
       fill("Black");
       textSize(18);
       text("(Quick reply)",displayWidth - 160 , displayHeight/2 - 35);
+      chatbox.getChoice();
    }
    if(gameVar === 1){
       game.game();
@@ -54,7 +56,7 @@ function draw(){
    chat.display();
    //image(dani_img, displayWidth - 1150, displayHeight/2 - 300, 125.6, 183.3);
    chatbox.getMessage();
-   console.log(plrnum);
+   //console.log(plrnum);
    char.picChoose();
       
    //document.getElementById("image-button").addEventListener("click", doSomething);
