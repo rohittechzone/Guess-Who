@@ -14,9 +14,9 @@ class Chat {
       this.name.hide();
       this.button = createButton('Send');
       this.button.hide();
-      this.yes = createButton('yes');
+      this.yes = createButton('Yes');
       this.yes.hide();
-      this.no = createButton('no');
+      this.no = createButton('No');
       this.no.hide();
       //this.button.size(100,200);
       this.submit = createButton('');
@@ -26,6 +26,17 @@ class Chat {
       this.you.hide();
       this.opponent = createElement('h3');
       this.opponent.hide();
+
+      this.dani = createButton('Dani');
+      this.dani.hide();
+      this.david = createButton('David');
+      this.david.hide();
+      this.jim = createButton('Jim');
+      this.jim.hide();
+      this.laria = createButton('Laria');
+      this.laria.hide();
+      this.sherman = createButton('Sherman');
+      this.sherman.hide();
     }
   
     display(){
@@ -47,8 +58,22 @@ class Chat {
       this.player1.size(250,75);
       this.player2.position(displayWidth/2-125, displayHeight/2);
       this.player2.size(250,75);
+      this.dani.position(displayWidth - 260, displayHeight/2+50);
+      this.david.position(displayWidth - 260, displayHeight/2+80);
+      this.jim.position(displayWidth - 260, displayHeight/2+110);
+      this.laria.position(displayWidth - 260, displayHeight/2+140);
+      this.sherman.position(displayWidth - 260, displayHeight/2+170);
+
       //this.button2.position();
-      
+      if(gameVar === 1){
+        this.dani.show();
+        this.david.show();
+        this.jim.show();
+        this.laria.show();
+        this.sherman.show();
+        fill("Black");
+        text("Your Final Guess :",displayWidth - 260, displayHeight/2 + 40);
+     }
       this.player1.mousePressed(()=>{
         plrnum = 1;
         this.name.show();
@@ -56,7 +81,7 @@ class Chat {
         this.player1.hide();
         this.player2.hide();
         chatbox.clear("");
-        //chatbox.plrUpdate(plrnum);
+        //chatbox.plrUpdate(1);
       });
       this.player2.mousePressed(()=>{
         plrnum = 2;
@@ -65,9 +90,16 @@ class Chat {
         this.player1.hide();
         this.player2.hide();
         chatbox.clear("");
+        //chatbox.plrUpdate(2);
       });
       
-      
+      this.yes.mousePressed(()=>{
+        chatbox.updateMessage("Yes");
+      });
+      this.no.mousePressed(()=>{
+        chatbox.updateMessage("No");
+      });
+
       this.submit.mousePressed(()=>{
         chatbox.updateName(this.name.value());
         this.name.hide();

@@ -68,6 +68,7 @@ class Game{
             textMove = textMove+10;
         // }, 1);
         textSize(85);
+        fill("yellow");
         text("Start", textMove, displayHeight/2);
         if(textMove > displayWidth){
             gameVar = 1;

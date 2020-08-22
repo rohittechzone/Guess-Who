@@ -64,16 +64,28 @@ class Chatbox {
     }
 
     plrUpdate(plrval){
-        var plrvalue = "plr";
-        database.ref(plrvalue).set({
-          player: plrval,
+        var plrvalue1 = "player1";
+        if(plrnum === 1){
+        database.ref(plrvalue1).set({
+          player1: plrval,
           //dani = 1
           //david = 2
           //jim = 3
           //laria = 4
           //sherman = 5
         });
-        
+      }
+      var plrvalue2 = "player2";
+      if(plrnum === 2){
+        database.ref(plrvalue2).set({
+          player2: plrval,
+          //dani = 1
+          //david = 2
+          //jim = 3
+          //laria = 4
+          //sherman = 5
+        });
+      }
      }
 
      clear(clear){
