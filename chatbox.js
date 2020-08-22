@@ -70,6 +70,7 @@ class Chat {
         this.button.show();
         this.you.show();
         this.opponent.show();
+        click1 = 1;
         click = 1;
         fill("Yellow");
         

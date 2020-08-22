@@ -66,7 +66,7 @@ class Chatbox {
     plrUpdate(plrval){
         var plrvalue = "plr";
         database.ref(plrvalue).set({
-          plrval: plrval,
+          player: plrval,
           //dani = 1
           //david = 2
           //jim = 3
@@ -85,7 +85,9 @@ class Chatbox {
       database.ref(message).set({
         plr1message: clear,
       });
+      chatbox.plrUpdate(0);
      }
+     
      updateName(name){
       
       if(plrnum === 1){

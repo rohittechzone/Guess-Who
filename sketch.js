@@ -5,9 +5,12 @@ var messagesent;
 var plr = 0;
 var plrnum = 0;
 var click = 0;
+var click1 = 0;
+var gameVar = 0;
 var char;
 var img;
 var dani,david,jim,laria,sherman;
+var game;
 
 function preload(){
    dani_img = loadImage('char/Dani.png');
@@ -23,13 +26,17 @@ function setup(){
    chat = new Chat();
    chatbox = new Chatbox();
    char = new Choose();
+   game = new Game();
    database = firebase.database();
    
 }
 function draw(){
    background(0, 128, 128);
-   if(click === 1){
+   if(click1 === 1){
       rect(displayWidth - 280,0,280,displayHeight);
+   }
+   if(gameVar === 1){
+      game.display();
    }
    chat.display();
    //image(dani_img, displayWidth - 1150, displayHeight/2 - 300, 125.6, 183.3);
