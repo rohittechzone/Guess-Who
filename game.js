@@ -58,5 +58,17 @@ class Game{
         if(playernum === 1){
             image(dani_img, displayWidth - 200,displayHeight/12,94.75,137.75);
         }
+        if(playernum === 2){
+            image(david_img, displayWidth - 200,displayHeight/12,94.75,137.75);
+        }
+        if(playernum === 3){
+            image(jim_img, displayWidth - 200,displayHeight/12,94.75,137.75);
+        }
+        if(playernum === 4){
+            image(laria_img, displayWidth - 200,displayHeight/12,94.75,137.75);
+        }
+        if(playernum === 5){
+            image(sherman_img, displayWidth - 200,displayHeight/12,94.75,137.75);
+        }
     }
 }
