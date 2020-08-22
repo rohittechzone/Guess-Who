@@ -26,11 +26,11 @@ class Game{
        //this.sherman.hide();
     }
 
-    display(){
+    game(){
       this.title.html("Eleminate the Characters by asking");
-      this.title.position(displayWidth/6, displayHeight/2 - 500);
+      this.title.position(displayWidth/5, displayHeight/2-400);
       this.title1.html("'Yes' or 'No' questions with the chatbox!!");
-      this.title1.position(displayWidth/6, displayHeight/2 - 450);
+      this.title1.position(displayWidth/5, displayHeight/2-360);
 
       this.dani.position(displayWidth/6,displayHeight/2 - 300);
       this.dani.size(125.6,183.3);
@@ -42,6 +42,26 @@ class Game{
       this.laria.size(125.6,183.3);
       this.sherman.position(displayWidth/6 + 270,displayHeight/2 - 80);
       this.sherman.size(125.6,183.3);
+
+        this.dani.mousePressed(()=>{
+         this.dani.hide();
+        });
+ 
+        this.david.mousePressed(()=>{
+         this.david.hide();
+        });
+ 
+        this.jim.mousePressed(()=>{
+         this.jim.hide();
+        });
+ 
+        this.laria.mousePressed(()=>{
+         this.laria.hide();
+        });
+        
+        this.sherman.mousePressed(()=>{
+         this.sherman.hide();
+        });
     }
     start(){
         //setTimeout(function(){ 

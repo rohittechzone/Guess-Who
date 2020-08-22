@@ -41,7 +41,7 @@ function draw(){
       rect(displayWidth - 280,0,280,displayHeight);
    }
    if(gameVar === 1){
-      game.display();
+      game.game();
       game.yourChar();
    }
    if(startVar === 1){
