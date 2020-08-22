@@ -87,7 +87,7 @@ class Chatbox {
       });
       chatbox.plrUpdate(0);
      }
-     
+
      updateName(name){
       
       if(plrnum === 1){

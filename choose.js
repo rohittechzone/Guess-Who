@@ -48,6 +48,7 @@ class Choose{
      
        this.dani.mousePressed(()=>{
        chatbox.plrUpdate(1);
+       playernum = 1;
        this.dani.hide();
        this.david.hide();
        this.jim.hide();
@@ -61,6 +62,7 @@ class Choose{
 
        this.david.mousePressed(()=>{
        chatbox.plrUpdate(2);
+       playernum = 2;
        this.dani.hide();
        this.david.hide();
        this.jim.hide();
@@ -74,6 +76,7 @@ class Choose{
 
        this.jim.mousePressed(()=>{
        chatbox.plrUpdate(3);
+       playernum = 3;
        this.dani.hide();
        this.david.hide();
        this.jim.hide();
@@ -87,6 +90,7 @@ class Choose{
 
        this.laria.mousePressed(()=>{
        chatbox.plrUpdate(4);
+       playernum = 4;
        this.dani.hide();
        this.david.hide();
        this.jim.hide();
@@ -100,6 +104,7 @@ class Choose{
        
        this.sherman.mousePressed(()=>{
        chatbox.plrUpdate(5);
+       playernum = 5;
        this.dani.hide();
        this.david.hide();
        this.jim.hide();

@@ -13,6 +13,7 @@ var dani,david,jim,laria,sherman;
 var game;
 var textMove = 0;
 var startVar = 0;
+var playernum = 0;
 
 function preload(){
    dani_img = loadImage('char/Dani.png');
@@ -41,6 +42,7 @@ function draw(){
    }
    if(gameVar === 1){
       game.display();
+      game.yourChar();
    }
    if(startVar === 1){
       game.start();
@@ -50,6 +52,7 @@ function draw(){
    chatbox.getMessage();
    console.log(plrnum);
    char.picChoose();
+      
    //document.getElementById("image-button").addEventListener("click", doSomething);
 }
 //document.getElementById("image-button").addEventListener("click", doSomething);

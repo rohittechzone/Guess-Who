@@ -1,5 +1,6 @@
 class Game{
     constructor(){
+       //this.yourchar = createButton("");
        this.title = createElement('h1');
        this.title1 = createElement('h1');
        //this.title.hide();
@@ -51,6 +52,11 @@ class Game{
         if(textMove > displayWidth){
             gameVar = 1;
             startVar = 0;
+        }
+    }
+    yourChar(){
+        if(playernum === 1){
+            image(dani_img, displayWidth - 200,displayHeight/12,94.75,137.75);
         }
     }
 }
