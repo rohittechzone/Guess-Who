@@ -62,6 +62,15 @@ class Game{
         this.sherman.mousePressed(()=>{
          this.sherman.hide();
         });
+        if(hide === 1){
+            this.dani.hide();
+            this.david.hide();
+            this.jim.hide();
+            this.laria.hide();
+            this.sherman.hide();
+            this.title.hide();
+            this.title1.hide();
+        }
     }
     start(){
         //setTimeout(function(){ 
@@ -91,5 +100,7 @@ class Game{
         if(playernum === 5){
             image(sherman_img, displayWidth - 200,displayHeight/12,94.75,137.75);
         }
+       
     }
+  
 }

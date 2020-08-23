@@ -1,7 +1,7 @@
 var chat,chatbox;
 var database;
 var messagesent;
-//var dani_img,david_img,jim_img,laria_img,sherman_img;
+var dani_img,david_img,jim_img,laria_img,sherman_img,wrong_img,cup_img;
 var plr = 0;
 var plrnum = 0;
 var click = 0;
@@ -15,6 +15,10 @@ var textMove = 0;
 var startVar = 0;
 var playernum = 0;
 var opponentChoice = 0;
+var wrongVar = 0;
+var end = 0;
+var winMove;
+var hide = 0;
 
 function preload(){
    dani_img = loadImage('char/Dani.png');
@@ -23,6 +27,7 @@ function preload(){
    laria_img = loadImage("char/Laria.png");
    sherman_img = loadImage("char/Sherman.png");
    wrong_img = loadImage("char/wrong.png");
+   cup_img = loadImage("char/cup.png");
 }
 
 function setup(){
@@ -34,12 +39,12 @@ function setup(){
    char = new Choose();
    game = new Game();
    database = firebase.database();
-   
+   winMove = displayHeight+450;
 }
 function draw(){
    background(0, 128, 128);
    //console.log(frameCount);
-   
+   //image(wrong_img, displayWidth/2 - 149.3, displayHeight/2 - 170.5,298.6,341.3);
    if(click1 === 1){
       fill("yellow");
       rect(displayWidth - 280,0,280,displayHeight);
@@ -55,12 +60,15 @@ function draw(){
    if(startVar === 1){
       game.start();
    }
+   
    chat.display();
    //image(dani_img, displayWidth - 1150, displayHeight/2 - 300, 125.6, 183.3);
    chatbox.getMessage();
    //console.log(plrnum);
    char.picChoose();
-      
+      wrong();
+      win();
+      //console.log(wrongVar);
    //document.getElementById("image-button").addEventListener("click", doSomething);
 }
 //document.getElementById("image-button").addEventListener("click", doSomething);
@@ -68,3 +76,24 @@ function draw(){
 //function doSomething() {
 	//alert("Button clicked!");
 //}
+function wrong(){
+  if(wrongVar === 1){
+   image(wrong_img, displayWidth/2 - 149.3, displayHeight/2 - 170.5,298.6,341.3);
+   setTimeout(function(){ 
+      wrongVar = 0;
+    }, 1000);
+    //wrongVar = 0;
+  }
+}
+function win(){
+   if(end === 1){
+      hide = 1;
+      if(winMove>displayHeight/2-225){
+      winMove = winMove-10;
+      }
+      else if(winMove>displayHeight/2-225){
+      winMove = winMove;
+      }
+      image(cup_img, displayWidth/2 - 150, winMove,300,450);
+   }   
+}

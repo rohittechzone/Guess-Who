@@ -120,7 +120,7 @@ class Chatbox {
       var choice = database.ref('player2/player2');
         choice.on("value",(data)=>{
           opponentChoice = data.val();
-          console.log(opponentChoice);
+          //console.log(opponentChoice);
           
         })
     }
@@ -128,7 +128,7 @@ class Chatbox {
       var choice = database.ref('player1/player1');
         choice.on("value",(data)=>{
           opponentChoice = data.val();
-          console.log(opponentChoice);
+         // console.log(opponentChoice);
        
         })
     }

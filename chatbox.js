@@ -131,70 +131,56 @@ class Chat {
   
         this.dani.mousePressed(()=>{
           if(opponentChoice === 1){
-            this.dani.hide();
-            this.david.hide();
-            this.jim.hide();
-            this.laria.hide();
-            this.sherman.hide();
+            end = 1;
+            console.log(end);
           }
           else{
-            image(wrong_img, displayWidth/2 - 149.3, displayHeight/2 - 170.5,298.6,341.3);
+            wrongVar = 1;
           }
 
         });
  
         this.david.mousePressed(()=>{
           if(opponentChoice === 2){
-            this.dani.hide();
-            this.david.hide();
-            this.jim.hide();
-            this.laria.hide();
-            this.sherman.hide();
+            end = 1;
+            console.log(end);
           }
           else{
-            
+            wrongVar = 1;
           }
 
         });
  
         this.jim.mousePressed(()=>{
           if(opponentChoice === 3){
-            this.dani.hide();
-            this.david.hide();
-            this.jim.hide();
-            this.laria.hide();
-            this.sherman.hide();
+            end = 1;
+            console.log(end);
           }
           else{
-            
+            wrongVar = 1;
+            //console.log(wrongVar);
           }
 
         });
  
         this.laria.mousePressed(()=>{
           if(opponentChoice === 4){
-            this.dani.hide();
-            this.david.hide();
-            this.jim.hide();
-            this.laria.hide();
-            this.sherman.hide();
+            end = 1;
+            console.log(end);
           }
           else{
-            
+            wrongVar = 1;
           }
 
         });
         
         this.sherman.mousePressed(()=>{
           if(opponentChoice === 5){
-            this.dani.hide();
-            this.david.hide();
-            this.jim.hide();
-            this.laria.hide();
-            this.sherman.hide();
+            end = 1;
+            console.log(end);
           }
           else{
-            
+            wrongVar = 1;
           }
 
         });
