@@ -134,4 +134,33 @@ class Chatbox {
     }
 
   }
+   updateWin(val){
+    if(plrnum === 1){
+      var player1win = "player1win";
+      database.ref(player1win).set({
+        player1win: val,
+      });
+     }
+     else if(plrnum === 2){
+      var player2win = "player2win";
+      database.ref(player2win).set({
+        player2win: val,
+      });
+     }
+   }
+   getWin(){
+    if(plrnum === 1){
+      var player2winstatus = database.ref('player2win/player2win');
+      player2winstatus.on("value",(data)=>{
+        opponentWinstatus = data.val();
+        })
+    }
+
+    else if(plrnum === 2){
+      var player1winstatus = database.ref('player1win/player1win');
+      player1winstatus.on("value",(data)=>{
+          opponentWinstatus = data.val();
+        })
+    }
+   }
 }

@@ -1,7 +1,7 @@
 var chat,chatbox;
 var database;
 var messagesent;
-var dani_img,david_img,jim_img,laria_img,sherman_img,wrong_img,cup_img;
+var dani_img,david_img,jim_img,laria_img,sherman_img,wrong_img,cup_img,over_img;
 var plr = 0;
 var plrnum = 0;
 var click = 0;
@@ -17,9 +17,9 @@ var playernum = 0;
 var opponentChoice = 0;
 var wrongVar = 0;
 var end = 0;
-var winMove;
+var winMove,overMove;
 var hide = 0;
-
+var opponentWinstatus = 0;
 function preload(){
    dani_img = loadImage('char/Dani.png');
    david_img = loadImage("char/David.png");
@@ -28,6 +28,7 @@ function preload(){
    sherman_img = loadImage("char/Sherman.png");
    wrong_img = loadImage("char/wrong.png");
    cup_img = loadImage("char/cup.png");
+   over_img = loadImage("char/over.png");
 }
 
 function setup(){
@@ -40,6 +41,7 @@ function setup(){
    game = new Game();
    database = firebase.database();
    winMove = displayHeight+450;
+   overMove = displayHeight+375;
 }
 function draw(){
    background(0, 128, 128);
@@ -66,8 +68,11 @@ function draw(){
    chatbox.getMessage();
    //console.log(plrnum);
    char.picChoose();
-      wrong();
-      win();
+   chatbox.getWin();
+   wrong();
+   win();
+   opponentWin();
+   console.log(opponentWinstatus);
       //console.log(wrongVar);
    //document.getElementById("image-button").addEventListener("click", doSomething);
 }
@@ -87,6 +92,7 @@ function wrong(){
 }
 function win(){
    if(end === 1){
+      chatbox.updateWin(1);
       hide = 1;
       if(winMove>displayHeight/2-225){
       winMove = winMove-10;
@@ -96,4 +102,15 @@ function win(){
       }
       image(cup_img, displayWidth/2 - 150, winMove,300,450);
    }   
+}
+function opponentWin(){
+   if(winMove>displayHeight/2-187.5){
+      overMove = overMove-10;
+      }
+   else if(winMove>displayHeight/2-225){
+      overMove = overMove;
+      } 
+   if(opponentWinstatus === 1){
+      image(over_img, displayWidth/2 - 333, overMove,666,375);
+   }
 }
