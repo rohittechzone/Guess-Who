@@ -6,7 +6,7 @@ class Chat {
       this.player1 = createButton('');
       this.player1.style('background', "url(https://user-images.githubusercontent.com/63205012/91166709-68063c00-e6f0-11ea-8214-127e6ccc5ef7.png)");
       this.player2 = createButton('');
-      this.player2.style('background', "url(https://lh3.googleusercontent.com/0ggZiES4xKotpcl5kchPrkEeOE7TLk9uL45cl0O2qMdHpz_kd-PrQr9FjHa8eVTMKZiju2hbP-wN840kUlAroXZPQwTsykuGIGsIENKTsMnbIApfZdHOZiFoEGRZPDr5EgP-1MIvOWFPDcXpQI9jpAhrkVtkMMbnnSeum9eDh_vvkxmqFboyPJEqFt7ZCJnsyk_upfzMraJbxzuX30QqGCtw3cW-lcOQcMXAM3W9RS-GV_h9tDPTQTrBELs9KBLCbGOhOI9SwVWZHGQWoIi9kq_AAhSdRLoshXU4ze8-5dX-CXRlYng8ELWaZu6-lN6m5CenhBOZG3fMLdOzYqvk-dTjxCMgUQnHYgLvRNlyRc6eEZvU9SrLoPKHq2EHWf5MQPzwwPhb71HC9m_z_KGbAonl_Djylon8ri1sqA7pZTnNV0YXoVZ1Z9oYmJkvb7nMdTWuqpsMdq50KJPUQ5S7Ni8e2lsxazObNEynoHfCleM1OLQeLN6vYf6R2NUxh05S9B-Ex-tBsyzXGMACvcLVh7CmI-wkc1ckVhVlpbmTDSvcZLCknF7-VRtKCsGww1daTyzsgK4gjPXRrHruM3Q7o5aIj7siISCY37D82CfsHbDpBkcWL1DctOhNRuFsA-APumAisJ5gsact33al8i2B8r3ioGrWphUrkKeToJPmThO9nXlzAGh6tj7a0DlhMQ=w250-h75-no?authuser=0)");
+      this.player2.style('background', "url(https://user-images.githubusercontent.com/63205012/91167728-152d8400-e6f2-11ea-9a3b-8373715e0055.png)");
 
       this.input = createInput("Your Message...");
       this.input.hide();
@@ -20,7 +20,7 @@ class Chat {
       this.no.hide();
       //this.button.size(100,200);
       this.submit = createButton('');
-      this.submit.style('background', "url(https://lh3.googleusercontent.com/sO7imKpVYjVXFVTnl8DJ0ZCEETD4QwMAKxVx9YKQocgbambU-FACwHK_TWbChhHKynUB7SwRApCulQA0ik77z9zz8CO81pCvSMOXvqk9vGhHWkk9_-xsQHCJxyrIfzDyoTwmVra-kLNyibK3gcmrLb_WwEeQR_w3ZUgE20dxWYUIphhTcQwm74EWAjFIqUu6vzEQbRnW9grOSfsDTmWAwMAdOv9v8izIBN2N0rTSVj89-qhWhdzhSih-38cBqrWlsAEa4QEgLBGoOwqp6ZMdo5FwlJaCpw51L0Kt2g9fq4pkhtEvVLiESlxy-JiYpP3ELP9zGzhjHA5BFtVzasubtoXf9NLmkS-5iwhXkdilDMSnvs1V2yktX7lBBcTu266CFKX4GPBj0tyunBHC6ncs9I-ialCQxHb77IFcf9D3I360xX21_r4UkAPn9uk0SBlRdfYEFeIf_e1VTpTXvRALUH60v4Cz1FeAydO_U03VhPyD5l4QHE-6C-7j43MJnSY6LrOCMmYUMO4R8jyl8UKlFKVX9DapzNx04cdkTV1uUWXFm7d6vH3LZ9OECGIQzFh3_lXBSQFN-5ECHrwQ9XPPoS0AWDZJr_GjjOPZdQ34ufS06pSsSlJ3fhCGnaUIepzRfOINkvdOp5eni_nctw3raVxVOm_OxyzrCNe3bVUjJgQPHESGZJZZoo9RjSaQfA=w250-h75-no?authuser=0)");
+      this.submit.style('background', "url(https://user-images.githubusercontent.com/63205012/91167808-31312580-e6f2-11ea-96ef-8c22d88ef9b4.png)");
       this.submit.hide();
       this.you = createElement('h3');
       this.you.hide();
