@@ -20,6 +20,8 @@ var end = 0;
 var winMove,overMove;
 var hide = 0;
 var opponentWinstatus = 0;
+var bgMusic;
+
 function preload(){
    dani_img = loadImage('char/Dani.png');
    david_img = loadImage("char/David.png");
@@ -29,6 +31,8 @@ function preload(){
    wrong_img = loadImage("char/wrong.png");
    cup_img = loadImage("char/cup.png");
    over_img = loadImage("char/over.png");
+   bgMusic = loadSound("char/bgmusic.mp3");
+   //bgMusic.setBuffer(bgMusic);
 }
 
 function setup(){
@@ -42,9 +46,12 @@ function setup(){
    database = firebase.database();
    winMove = displayHeight+450;
    overMove = displayHeight+375;
+  
+  // bgMusic.play();
 }
 function draw(){
    background(0, 128, 128);
+   bgMusic.loop();
    //console.log(frameCount);
    //image(wrong_img, displayWidth/2 - 149.3, displayHeight/2 - 170.5,298.6,341.3);
    if(click1 === 1){

@@ -37,10 +37,16 @@ class Chat {
       this.laria.hide();
       this.sherman = createButton('Sherman');
       this.sherman.hide();
+      this.exit = createButton();
+      this.exit.hide();
+    }
+    exitButton(){
+      this.exit
     }
   
     display(){
-      this.you.html("You : ");
+      this.exit.position(displayWidth/2-125, displayHeight/2);
+      this.exit.size(250,75);
       this.chattitle.html("Chat Box");
       this.opponent.html("Opponent : ");
       this.opponent.position(displayWidth - 260, displayHeight/2 - 200);
