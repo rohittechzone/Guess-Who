@@ -50,7 +50,7 @@ function setup(){
 function draw(){
    background(0, 128, 128);
 
-   //bgMusic.loop();
+   bgMusic.loop();
    //console.log(frameCount);
    //image(wrong_img, displayWidth/2 - 149.3, displayHeight/2 - 170.5,298.6,341.3);
    if(click1 === 1){
