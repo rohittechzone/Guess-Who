@@ -24,6 +24,10 @@ class Game{
        this.sherman = createButton("");
        this.sherman.style('background', "url(https://user-images.githubusercontent.com/63205012/91167540-c08a0900-e6f1-11ea-872e-5fbceb157478.png)");
        //this.sherman.hide();
+
+       this.restart = createButton("");
+       this.restart.style('background', "url(https://user-images.githubusercontent.com/63205012/92231941-457fda00-eecb-11ea-8a3e-aad19cd67ebc.png)");
+       this.restart.hide();
     }
 
     game(){
@@ -42,6 +46,14 @@ class Game{
       this.laria.size(125.6,183.3);
       this.sherman.position(displayWidth/6 + 270,displayHeight/2 - 80);
       this.sherman.size(125.6,183.3);
+
+      this.restart.position(displayWidth/2-125, displayHeight/5);
+      this.restart.size(250,75);
+
+      this.restart.mousePressed(()=>{
+         chatbox.clear("");
+         location.reload();
+       });
 
         this.dani.mousePressed(()=>{
          this.dani.hide();
@@ -70,6 +82,7 @@ class Game{
             this.sherman.hide();
             this.title.hide();
             this.title1.hide();
+            this.restart.show();
         }
     }
     start(){

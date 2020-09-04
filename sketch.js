@@ -23,7 +23,8 @@ var opponentWinstatus = 0;
 var bgMusic;
 
 function preload(){
-   dani_img = loadImage('char/Dani.png');
+   bgMusic = loadSound("char/bgmusic.mp3");
+   dani_img = loadImage("char/Dani.png");
    david_img = loadImage("char/David.png");
    jim_img = loadImage("char/jim.png");
    laria_img = loadImage("char/Laria.png");
@@ -31,8 +32,7 @@ function preload(){
    wrong_img = loadImage("char/wrong.png");
    cup_img = loadImage("char/cup.png");
    over_img = loadImage("char/over.png");
-   bgMusic = loadSound("char/bgmusic.mp3");
-   //bgMusic.setBuffer(bgMusic);
+
 }
 
 function setup(){
@@ -46,12 +46,11 @@ function setup(){
    database = firebase.database();
    winMove = displayHeight+450;
    overMove = displayHeight+375;
-  
-  // bgMusic.play();
 }
 function draw(){
    background(0, 128, 128);
-   bgMusic.loop();
+
+   //bgMusic.loop();
    //console.log(frameCount);
    //image(wrong_img, displayWidth/2 - 149.3, displayHeight/2 - 170.5,298.6,341.3);
    if(click1 === 1){
@@ -80,6 +79,7 @@ function draw(){
    win();
    opponentWin();
    console.log(opponentWinstatus);
+   
       //console.log(wrongVar);
    //document.getElementById("image-button").addEventListener("click", doSomething);
 }
@@ -111,13 +111,15 @@ function win(){
    }   
 }
 function opponentWin(){
-   if(winMove>displayHeight/2-187.5){
+   if(opponentWinstatus === 1){
+      hide = 1;
+   if(overMove>displayHeight/2-187.5){
       overMove = overMove-10;
       }
-   else if(winMove>displayHeight/2-225){
+   else if(overMove>displayHeight/2-225){
       overMove = overMove;
       } 
-   if(opponentWinstatus === 1){
+   
       image(over_img, displayWidth/2 - 333, overMove,666,375);
    }
 }

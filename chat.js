@@ -86,7 +86,7 @@ class Chatbox {
           //sherman = 5
         });
       }
-     }
+    }
 
      clear(clear){
       var message = "plr2message";
@@ -98,6 +98,8 @@ class Chatbox {
         plr1message: clear,
       });
       chatbox.plrUpdate(0);
+      chatbox.updateWin(0);
+      end = 0;
      }
 
      updateName(name){
@@ -155,6 +157,7 @@ class Chatbox {
         opponentWinstatus = data.val();
         })
     }
+  
 
     else if(plrnum === 2){
       var player1winstatus = database.ref('player1win/player1win');
@@ -162,5 +165,5 @@ class Chatbox {
           opponentWinstatus = data.val();
         })
     }
-   }
+  }
 }
