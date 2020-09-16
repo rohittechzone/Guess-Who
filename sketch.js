@@ -58,7 +58,7 @@ function draw(){
       rect(displayWidth - 280,0,280,displayHeight);
       fill("Black");
       textSize(18);
-      text("(Quick reply)",displayWidth - 160 , displayHeight/2 - 35);
+      text("(Quick reply)",displayWidth - 160 , displayHeight/2+15);
       chatbox.getChoice();
    }
    if(gameVar === 1){
@@ -78,7 +78,7 @@ function draw(){
    wrong();
    win();
    opponentWin();
-   console.log(opponentWinstatus);
+   //console.log(opponentWinstatus);
    
       //console.log(wrongVar);
    //document.getElementById("image-button").addEventListener("click", doSomething);

@@ -7,7 +7,8 @@ class Chat {
       this.player1.style('background', "url(https://user-images.githubusercontent.com/63205012/91166709-68063c00-e6f0-11ea-8214-127e6ccc5ef7.png)");
       this.player2 = createButton('');
       this.player2.style('background', "url(https://user-images.githubusercontent.com/63205012/91167728-152d8400-e6f2-11ea-9a3b-8373715e0055.png)");
-
+      this.rules = createButton('How to Play');
+      
       this.input = createInput("Your Message...");
       this.input.hide();
       this.name = createInput("Enter Your Name");
@@ -49,15 +50,17 @@ class Chat {
       this.input.position(displayWidth - 260 , displayHeight/2 - 80);
       this.name.position(displayWidth/2-125, displayHeight/2 - 80);
       this.name.size(240,20);
-      this.button.position(displayWidth - 260, displayHeight/2);
-      this.yes.position(displayWidth - 260 , displayHeight/2 - 50);
-      this.no.position(displayWidth - 200 , displayHeight/2 - 50);
+      this.button.position(displayWidth - 260, displayHeight/2 - 50);
+      this.yes.position(displayWidth - 260 , displayHeight/2);
+      this.no.position(displayWidth - 200 , displayHeight/2);
       this.submit.position(displayWidth/2-125, displayHeight/2);
       this.submit.size(250,75);
       this.player1.position(displayWidth/2-125, displayHeight/2-150);
       this.player1.size(250,75);
       this.player2.position(displayWidth/2-125, displayHeight/2);
       this.player2.size(250,75);
+      this.rules.position(displayWidth - 220, 10);
+      this.rules.size(150,75);
       this.dani.position(displayWidth - 260, displayHeight/2+50);
       this.david.position(displayWidth - 260, displayHeight/2+80);
       this.jim.position(displayWidth - 260, displayHeight/2+110);
@@ -74,12 +77,16 @@ class Chat {
         fill("Black");
         text("Your Final Guess :",displayWidth - 260, displayHeight/2 + 40);
      }
+     this.rules.mousePressed(()=>{
+      location.replace("http://guess-who-rules.rohit.technology/")
+    });
       this.player1.mousePressed(()=>{
         plrnum = 1;
         this.name.show();
         this.submit.show();
         this.player1.hide();
         this.player2.hide();
+        this.rules.hide();
         chatbox.clear("");
         //chatbox.plrUpdate(1);
       });
@@ -89,6 +96,7 @@ class Chat {
         this.submit.show();
         this.player1.hide();
         this.player2.hide();
+        this.rules.hide();
         chatbox.clear("");
         //chatbox.plrUpdate(2);
       });
@@ -132,7 +140,7 @@ class Chat {
         this.dani.mousePressed(()=>{
           if(opponentChoice === 1){
             end = 1;
-            console.log(end);
+           // console.log(end);
           }
           else{
             wrongVar = 1;
@@ -143,7 +151,7 @@ class Chat {
         this.david.mousePressed(()=>{
           if(opponentChoice === 2){
             end = 1;
-            console.log(end);
+           // console.log(end);
           }
           else{
             wrongVar = 1;
@@ -154,7 +162,7 @@ class Chat {
         this.jim.mousePressed(()=>{
           if(opponentChoice === 3){
             end = 1;
-            console.log(end);
+           // console.log(end);
           }
           else{
             wrongVar = 1;
@@ -166,7 +174,7 @@ class Chat {
         this.laria.mousePressed(()=>{
           if(opponentChoice === 4){
             end = 1;
-            console.log(end);
+            //console.log(end);
           }
           else{
             wrongVar = 1;
@@ -177,7 +185,7 @@ class Chat {
         this.sherman.mousePressed(()=>{
           if(opponentChoice === 5){
             end = 1;
-            console.log(end);
+            //console.log(end);
           }
           else{
             wrongVar = 1;
