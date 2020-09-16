@@ -7,7 +7,8 @@ class Chat {
       this.player1.style('background', "url(https://user-images.githubusercontent.com/63205012/91166709-68063c00-e6f0-11ea-8214-127e6ccc5ef7.png)");
       this.player2 = createButton('');
       this.player2.style('background', "url(https://user-images.githubusercontent.com/63205012/91167728-152d8400-e6f2-11ea-9a3b-8373715e0055.png)");
-      this.rules = createButton('How to Play');
+      this.rules = createButton('');
+      this.rules.style('background', "url(https://user-images.githubusercontent.com/63205012/93334976-62a99680-f843-11ea-9993-7ba882be1539.jpg)");
       
       this.input = createInput("Your Message...");
       this.input.hide();
@@ -60,7 +61,7 @@ class Chat {
       this.player2.position(displayWidth/2-125, displayHeight/2);
       this.player2.size(250,75);
       this.rules.position(displayWidth - 220, 10);
-      this.rules.size(150,75);
+      this.rules.size(150,60);
       this.dani.position(displayWidth - 260, displayHeight/2+50);
       this.david.position(displayWidth - 260, displayHeight/2+80);
       this.jim.position(displayWidth - 260, displayHeight/2+110);
